@@ -33,10 +33,11 @@ public class PlayerScript : MonoBehaviour
 		if (shoot)
 		{
 			WeaponScript weapon = GetComponent<WeaponScript>();
-			if (weapon != null)
+			if (weapon != null && weapon.enabled && weapon.CanAttack)
 			{
 				// false because the player is not an enemy
 				weapon.Attack(false);
+				SoundEffectsHelper.Instance.MakePlayerShotSound();
 			}
 		}
 
