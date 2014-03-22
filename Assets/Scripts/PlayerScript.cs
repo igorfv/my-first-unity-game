@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
 	/// <summary>
 	/// 1 - The speed of the ship
 	/// </summary>
-	public Vector2 speed = new Vector2(10, 10);
+	public Vector2 speed = new Vector2(50, 50);
 	
 	// 2 - Store the movement
 	private Vector2 movement;
@@ -23,7 +23,21 @@ public class PlayerScript : MonoBehaviour
 		movement = new Vector2(
 			speed.x * inputX,
 			speed.y * inputY);
+
+		// 5 - Shooting
+		bool shoot = Input.GetButtonDown("Fire1");
+		shoot |= Input.GetButtonDown("Fire2");
+		// Careful: For Mac users, ctrl + arrow is a bad idea
 		
+		if (shoot)
+		{
+			WeaponScript weapon = GetComponent<WeaponScript>();
+			if (weapon != null)
+			{
+				// false because the player is not an enemy
+				weapon.Attack(false);
+			}
+		}
 	}
 	
 	void FixedUpdate()

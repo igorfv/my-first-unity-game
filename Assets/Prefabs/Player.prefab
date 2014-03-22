@@ -11,6 +11,8 @@ GameObject:
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -55,6 +57,31 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 10.832325, y: 8.92433453}
   m_Center: {x: -.11349678, y: -.0756661072}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2945fa6120120472da3177d4c775499a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotPrefab: {fileID: 0}
+  shootingRate: .25
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b14ec40f5544ee98da24b09cca7bdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 25, y: 25}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
