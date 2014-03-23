@@ -92,7 +92,9 @@ public class PlayerScript : MonoBehaviour
 		if (damagePlayer)
 		{
 			HealthScript playerHealth = this.GetComponent<HealthScript>();
-			if (playerHealth != null) playerHealth.Damage(1);
+			if (playerHealth != null) {
+				playerHealth.Damage(1);
+			}
 		}
 	}
 }
